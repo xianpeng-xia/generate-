@@ -16,11 +16,12 @@ import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 public class MyGenerator {
 
     //private static String suffix = "center";
-    private static String suffix = "log";
+    //private static String suffix = "log";
+    private static String suffix = "center";
     /**
      * db
      */
-    private static String url = "jdbc:mysql://192.168.1.10:3306/gaming_" + suffix + "?serverTimezone=CTT";
+    private static String url = "jdbc:mysql://192.168.1.10:3306/bet_" + suffix + "?serverTimezone=CTT";
     private static String user = "root";
     private static String password = "gbankclub";
     private static String dirverName = "com.mysql.jdbc.Driver";
@@ -29,7 +30,7 @@ public class MyGenerator {
     /**
      * 生成的东西放在这个包里
      */
-    private static String packageName = "com.gbank.gaming";
+    private static String packageName = "com.gbank.bet";
 
     public static void main(String[] args) {
         GlobalConfig config = new GlobalConfig();
@@ -66,9 +67,10 @@ public class MyGenerator {
                     .setParent(packageName)
                     .setController("controller")
                     .setEntity("entity")
-                    .setMapper("dao")
-                    .setServiceImpl(suffix + ".serviceImpl")
-                    .setMapper(suffix + ".dao")
+                    .setMapper("mapper")
+                    .setService("service")
+                    .setServiceImpl(suffix + ".service.impl")
+                    .setMapper(suffix + ".mapper")
             ).execute();
     }
 }
