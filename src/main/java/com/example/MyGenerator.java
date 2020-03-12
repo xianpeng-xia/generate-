@@ -21,11 +21,11 @@ public class MyGenerator {
     /**
      * db
      */
-    private static String url = "jdbc:mysql://192.168.1.10:3306/bet_" + suffix + "?serverTimezone=CTT";
+    private static String url = "jdbc:mysql://192.168.1.10:3306/gaming_" + suffix + "?serverTimezone=CTT";
     private static String user = "root";
     private static String password = "gbankclub";
     private static String dirverName = "com.mysql.jdbc.Driver";
-    private static String author = "夏先鹏";
+    private static String author = "x";
     private static String outputDir = "/Users/michael/Documents";
     /**
      * 生成的东西放在这个包里
